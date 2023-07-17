@@ -37,8 +37,29 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	margin-bottom: 60px;
+	overflow-x: hidden;
+
 }
 
+  .home-button {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	width: 25px;
+	height: 25px;
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 999;
+}
+
+.home-button a {
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+}
 ol, ul {
 	list-style: none;
 }

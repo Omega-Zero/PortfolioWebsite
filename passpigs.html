@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    
+    <title>Pass The Pigs</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/passpigs.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body>	
+<div class="home-button">
+  <a href="index.html"><i class="fas fa-home"></i></a>
+</div>
+<div class="home-button">
+  <a href="index.html"><i class="fas fa-home"></i></a>
+</div>
+  	<img class="banner-img" src="images/PigsBanner.JPG" alt="Pigs Banner" /> 
+    <div class="container">
+
+        <div class="players">
+            <div id="player1" class="player-container">
+                    <div class="tile-title">Player 1 </div>
+                    <div class="player-score">
+                        <h1><span id="p1ScoreLabel">0</span></h1>
+                    </div>
+            </div>
+            <div id="player2" class="player-container">
+                    <div class="tile-title">Player 2 </div>
+                    <div class="player-score">
+                        <h1><span id="p2ScoreLabel">0</span></h1>
+                    </div>  
+            </div>
+        </div>
+ 
+        <!-- <canvas id="pigCanvas" ></canvas>-->
+        <div class="turn-details">
+            <div class="tile-box">
+                <div>Current Roll</div>
+                <h1><span id="currRoll">0</span></h1>
+            </div>
+            <div class="tile-box">
+                <div>Current Turn</div>
+                <h1><span id="currTurn">0</span></h1>
+            </div>
+        </div>
+    
+        <div class="action-buttons">
+            <button id="passButton" onclick="passTurn()">Pass</button>
+            <button id="rollButton" onclick="rollDice()">Roll</button>
+        </div>
+      
+        <ul id="logList">
+        </ul>
+
+        <!--Overlays -->
+        <div id="pigout-overlay" class="pigout-overlay">
+            <div id="pigout" class="pigout">
+              <img src="images/PiggedOut.jpg" alt="Pigout Image">
+            </div>
+        </div>
+
+        <div id="newgame-overlay" class="newgame-overlay">
+            <div id="newgame" class="newgame">
+              <h2>New Game</h2>
+              <label for="integerInput">Win Score:
+                <input type="number" id="integerInput" name="integerInput" step="1" pattern="\d+" value="100" required>
+              </label>
+              <label class="label-computer-checkbox">
+                <input type="checkbox" class="checkbox" id="computer-game-checkbox">
+                <span>Computer Game</span>
+              </label>
+              <button onclick="startNewGame()">Start</button>
+            </div>
+        </div>
+        
+        <div id="winOverlay" class="winner-overlay">
+            <img src="images/winBannerimage.jpg" alt="Banner Image"> 
+            <div id="winnerText" class="winnerText">Player X won!</div>
+            <button id="newGameBtn" onclick="configureNewGame()">New Game</button>
+        </div>
+
+    </div>
+    <script src="assets/js/passpigs.js"></script>
+</body>
+</html>

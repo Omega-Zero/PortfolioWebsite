@@ -316,7 +316,9 @@ function getRandomQuote() {
   }
 
   var randomQuoteElement = document.getElementById("randomQuote");
-  randomQuoteElement.innerHTML = "<em>" + getRandomQuote() + "</em>";
+  if (randomQuoteElement && randomQuoteElement.innerHTML !== null){
+	randomQuoteElement.innerHTML = "<em>" + getRandomQuote() + "</em>";
+  }
 
 	/**
 	 * Apply "placeholder" attribute polyfill to one or more forms.
