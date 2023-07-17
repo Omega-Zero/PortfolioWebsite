@@ -12,6 +12,7 @@ class PigGame{
       this.turnScore = 0;
       this.totalRollsThisGame = 0;
       this.diceRoll = 0;
+      this.isGameComplete = false;
       this.currentPlayer = new Player();
       this.player1 = new Player();
       this.player2 = new Player();
@@ -121,6 +122,7 @@ function checkPigOut()  {
 function checkWinCondition(player){
   if(player.score >= CurrentPigGame.winScore){
     triggerWinOverlay(player);
+    isGameComplete = true; 
  }
 }
 
@@ -167,7 +169,7 @@ function passTurn() {
 
 async function computerPlay(){
   await rollDice();
-  if(CurrentPigGame.currentPlayer.isComputer){
+  if(CurrentPigGame.currentPlayer.isComputer && !CurrentPigGame.isGameComplete){
     let currentScore = CurrentPigGame.turnScore;
     switch(true){
       case currentScore > 10: 
