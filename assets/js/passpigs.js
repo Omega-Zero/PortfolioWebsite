@@ -122,7 +122,7 @@ function checkPigOut()  {
 function checkWinCondition(player){
   if(player.score >= CurrentPigGame.winScore){
     triggerWinOverlay(player);
-    isGameComplete = true; 
+    CurrentPigGame.isGameComplete = true; 
  }
 }
 
