@@ -13,6 +13,10 @@
 <div class="home-button">
   <a href="index.html"><i class="fas fa-home"></i></a>
 </div>
+<div class="question-button" onclick="howToPlayOverlay()">
+    <a><i class="fas fa-question"></i></a>
+</div>
+
   	<img class="banner-img" src="images/PigsBanner.JPG" alt="Pigs Banner" /> 
     <div class="container">
 
@@ -78,6 +82,18 @@
             <button id="newGameBtn" onclick="configureNewGame()">New Game</button>
         </div>
 
+        <div id ="help-overlay"  class="help-overlay">
+            <img src="images/help-banner.jpg" alt="Help Image"> 
+            <h3>Rules:</h3>
+            <p>
+                1. The game has two players, and each player takes turns to roll a dice.<br>
+                2. On a player's turn, they can roll the dice as many times as they want and add the rolled numbers to their current score.<br>
+                3. If a player rolls a 1, their current score becomes 0, and they lose their turn.<br>
+                4. A player can choose to "Hold" their current score, which adds their current score to their total score, and then it becomes the other player's turn.<br>
+                5. The first player to reach the winning score (e.g., 100 points) wins the game.
+            </p>
+            <button id="gameHelpBtn" onclick="closeHelpOverlay()">Back</button>
+        </div>
     </div>
     <script src="assets/js/passpigs.js"></script>
 </body>

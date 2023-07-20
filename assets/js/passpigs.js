@@ -268,3 +268,10 @@ function configureNewGame(){
     document.getElementById("newgame-overlay").style.display = "flex";
 }
 
+function howToPlayOverlay(){
+  document.getElementById("help-overlay").style.display = "flex";
+}
+function closeHelpOverlay(){
+  document.getElementById("help-overlay").style.display = "none";
+
+}
