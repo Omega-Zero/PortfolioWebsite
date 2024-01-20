@@ -295,31 +295,7 @@
 		return $this;
 
 	};
-	/**
-	 * Apply random quote for beginning page 
-	 *
-	 */
-	var quotes = [
-		"\"The only way to discover the limits of the possible is to go beyond them into the impossible.\" - Arthur C. Clarke",
-		"\"The best way to predict the future is to invent it.\" - Alan Kay",
-		"\"The desire to know is natural to good men.\" - Leonardo da Vinci",
-		"\"I have no special talent. I am only passionately curious.\" - Albert Einstein",
-		"\"The future belongs to those who believe in the beauty of their dreams.\" - Eleanor Roosevelt",
-		"\"Those who can imagine anything, can create the impossible. - Alan Turing\""
-		
-
-	  ];
-	  // Function to select a random greeting from the array
-function getRandomQuote() {
-	var randomIndex = Math.floor(Math.random() * quotes.length);
-	return quotes[randomIndex];
-  }
-
-  var randomQuoteElement = document.getElementById("randomQuote");
-  if (randomQuoteElement && randomQuoteElement.innerHTML !== null){
-	randomQuoteElement.innerHTML = "<em>" + getRandomQuote() + "</em>";
-  }
-
+ 
 	/**
 	 * Apply "placeholder" attribute polyfill to one or more forms.
 	 * @return {jQuery} jQuery object.

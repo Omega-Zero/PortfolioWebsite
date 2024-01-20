@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Jeffs World</title>
+		<title>Omega Creations</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -32,8 +32,8 @@
 				<!-- Intro -->
 				<section id="intro" class="wrapper style1 fullscreen fade-up">
 					<div class="inner">
-					  <p>Greetings- <br/>My name is Jeffrey Marple and I am a Computer Scientist and Software Developer. 
-						<p><span id="randomQuote"><em></em></span></p>
+					  <p>Greetings- <br/>My name is Jeff, and I am a Computer Scientist, Software Developer and founder of Omega Creations. 
+						<p ><span id="randomQuote"><em></em></span></p>
 					  <ul class="actions">
 						<li><a href="#one" class="button scrolly">Learn more</a></li>
 					  </ul>
@@ -209,5 +209,51 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+
 	</body>
+	<script>
+		var quotes = [
+			"\"The only way to discover the limits of the possible is to go beyond them into the impossible.\" - Arthur C. Clarke",
+			"\"The best way to predict the future is to invent it.\" - Alan Kay",
+			"\"The desire to know is natural to good men.\" - Leonardo da Vinci",
+			"\"I have no special talent. I am only passionately curious.\" - Albert Einstein",
+			"\"The future belongs to those who believe in the beauty of their dreams.\" - Eleanor Roosevelt",
+			"\"Those who can imagine anything, can create the impossible. - Alan Turing\""
+		  ];
+		let lastQuoteIndex = 0;
+		function getRandomQuote() {
+			console.log("hitting");
+			var randomIndex = Math.floor(Math.random() * quotes.length);
+			if(randomIndex != lastQuoteIndex){
+				lastQuoteIndex = randomIndex;
+				return quotes[randomIndex];
+			}else{
+				return getRandomQuote();
+			}
+		}
+	
+		function setRandomQuote() {
+			var randomQuoteElement = document.getElementById("randomQuote");
+			if (randomQuoteElement && randomQuoteElement.innerHTML !== null) {
+				randomQuoteElement.innerHTML = "<em>" + getRandomQuote() + "</em>";
+			}
+		}
+		window.onload = function() {
+			// Set interval to call the function every 8 seconds
+			var timer = setInterval(setRandomQuote, 7000);
+		};
+	
+	</script>
+	<style>
+		@keyframes fadeInOut {
+			0% { opacity: 0; }
+            25% { opacity: 1; }
+            75% { opacity: 1; }
+            100% { opacity: 0; }
+		}
+	
+		#randomQuote {
+			animation: fadeInOut 8s linear infinite; /* Adjust the duration to match the interval */
+		}
+	</style>
 </html>
