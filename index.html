@@ -222,7 +222,6 @@
 		  ];
 		let lastQuoteIndex = 0;
 		function getRandomQuote() {
-			console.log("hitting");
 			var randomIndex = Math.floor(Math.random() * quotes.length);
 			if(randomIndex != lastQuoteIndex){
 				lastQuoteIndex = randomIndex;
@@ -239,7 +238,7 @@
 			}
 		}
 		window.onload = function() {
-			// Set interval to call the function every 8 seconds
+			setRandomQuote();
 			var timer = setInterval(setRandomQuote, 7000);
 		};
 	
