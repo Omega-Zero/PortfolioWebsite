@@ -91,12 +91,12 @@
 							<section>
 								<span class="icon solid major fa-code"></span>
 								<h3> Full-Stack Developer </h3>
-								<p>Need front, back, or database work?</p>
+								<p>Need a fully functioning & responsive website made for your business or professional portfolio?</p>
 							</section>
 							<section>
 								<span class="icon major fa-gem"></span>
 								<h3>Fortune 500 Enterprise Developer</h3>
-								<p>Need the perfect automation tool to improve your business' work flow? </p>
+								<p>Need the perfect automation tool to improve you or your team's work flow? </p>
 							</section>
 							<section>
 								<span class="icon solid major fa-desktop"></span>
@@ -121,7 +121,7 @@
 						</div>
 						<ul class="actions">
 					<!--		<li><a href="generic.html" class="button">Learn more</a></li> -->
-							<li><a href= "images/online_jmarpleResume6-6.jpg" class="button">Learn more</a></li>
+						<!--	<li><a href= "images/online_jmarpleResume6-6.jpg" class="button">Learn more</a></li>-->
 						</ul>	
 					</div>
 				</section>
@@ -195,7 +195,7 @@
 			<footer id="footer" class="wrapper style1-alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Website owned by Jeffrey Marple. All rights reserved.</li>
+						<li>&copy; Website owned by OmegaCreations Co and its sole proprietor. All rights reserved.</li>
 					</ul>
 				</div>
 			</footer>
@@ -213,12 +213,12 @@
 	</body>
 	<script>
 		var quotes = [
-			"\"The only way to discover the limits of the possible is to go beyond them into the impossible.\" - Arthur C. Clarke",
-			"\"The best way to predict the future is to invent it.\" - Alan Kay",
-			"\"The desire to know is natural to good men.\" - Leonardo da Vinci",
-			"\"I have no special talent. I am only passionately curious.\" - Albert Einstein",
-			"\"The future belongs to those who believe in the beauty of their dreams.\" - Eleanor Roosevelt",
-			"\"Those who can imagine anything, can create the impossible. - Alan Turing\""
+			"\"The only way to discover the limits of the possible is to go beyond them into the impossible.\" <br>- Arthur C. Clarke",
+			"\"The best way to predict the future is to invent it.\" <br>- Alan Kay",
+			"\"The desire to know is natural to good men.\" <br>- Leonardo da Vinci",
+			"\"I have no special talent. I am only passionately curious.\" <br>- Albert Einstein",
+			"\"The future belongs to those who believe in the beauty of their dreams.\" <br>- Eleanor Roosevelt",
+			"\"Those who can imagine anything, can create the impossible. \n <br>- Alan Turing"
 		  ];
 		let lastQuoteIndex = 0;
 		function getRandomQuote() {
@@ -234,14 +234,74 @@
 		function setRandomQuote() {
 			var randomQuoteElement = document.getElementById("randomQuote");
 			if (randomQuoteElement && randomQuoteElement.innerHTML !== null) {
-				randomQuoteElement.innerHTML = "<em>" + getRandomQuote() + "</em>";
+				randomQuoteElement.innerHTML =  "<em style='white-space: pre-line;'>" + getRandomQuote() + "</em>";;
 			}
 		}
 		window.onload = function() {
 			setRandomQuote();
 			var timer = setInterval(setRandomQuote, 7000);
+		/*	const deviceInfo = {
+				userAgent: navigator.userAgent,
+				platform: navigator.platform,
+				appName: navigator.appName,
+				appVersion: navigator.appVersion,
+				language: navigator.language,
+				screenWidth: window.screen.width,
+				screenHeight: window.screen.height,
+				devicePixelRatio: window.devicePixelRatio,
+  cookieEnabled: navigator.cookieEnabled,
+  online: navigator.onLine,
+  hardwareConcurrency: navigator.hardwareConcurrency,
+  doNotTrack: navigator.doNotTrack,
+  javaEnabled: navigator.javaEnabled(),
+  screenColorDepth: window.screen.colorDepth,
+  screenOrientation: window.screen.orientation.type,
+  vendor: navigator.vendor,
+  product: navigator.product,
+  productSub: navigator.productSub,
+  vendorSub: navigator.vendorSub,
+
+  // Connection
+  connectionType: navigator.connection ? navigator.connection.type : "Not available",
+
+  // Memory
+  deviceMemory: navigator.deviceMemory,
+
+  // Battery
+  battery: navigator.getBattery ? navigator.getBattery() : "Battery information not supported",
+
+			};
+			var userAgent = deviceInfo.userAgent
+						console.log(deviceInfo);
+						if (userAgent.match(/Android/i)) {
+			console.log("User is using Android device");
+			} else if (userAgent.match(/iPhone|iPad|iPod/i)) {
+			console.log("User is using iOS device");
+			} else if (userAgent.match(/Windows Phone|iemobile/i)) {
+			console.log("User is using Windows Phone");
+			} else if (userAgent.match(/Macintosh|Mac OS X/i)) {
+			console.log("User is using Mac");
+			} else if (userAgent.match(/Windows/i)) {
+			console.log("User is using Windows");
+			} else {
+			console.log("User device is not recognized");
+			}
+			if ("geolocation" in navigator) {
+				navigator.geolocation.getCurrentPosition(function (position) {
+					// Access user's latitude and longitude
+					const latitude = position.coords.latitude;
+					const longitude = position.coords.longitude;
+
+					// Now you can use these coordinates for your purposes
+					console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+				}, function (error) {
+					console.error(`Error getting location: ${error.message}`);
+				});
+				} else {
+				console.log("Geolocation is not supported in this browser.");
+			}	*/
+
 		};
-	
 	</script>
 	<style>
 		@keyframes fadeInOut {
