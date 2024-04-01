@@ -14,7 +14,7 @@
         display: block;
         margin: 0 auto;
 		height: 75%;
-		width: 75%;;
+		width: 75%;
     }
 
     #score-container {
@@ -249,6 +249,48 @@ window.onload = setup;
         update();
     }, 1000/60); // 60 FPS
 
+
+//listeners for screen touch input
+// Function to handle touch start event
+function handleTouchStart(event) {
+    event.preventDefault(); // Prevent default touch behavior
+
+    // Get the touch position relative to the screen
+    var touchX = event.touches[0].clientX;
+    var touchY = event.touches[0].clientY;
+
+    // Determine the quarter of the screen based on touch position
+    var screenWidth = window.innerWidth;
+    var screenHeight = window.innerHeight;
+    var quarterWidth = screenWidth / 2;
+    var quarterHeight = screenHeight / 2;
+
+    // Update keys based on touch position
+    if (touchX >= quarterWidth) {
+        keys.s = true; // Bottom right of the screen corresponds to 's'
+    } else {
+        keys.w = true; // Bottom left of the screen corresponds to 'w'
+    }
+
+    if (touchY >= quarterHeight) {
+        keys.down = true; // Bottom half of the screen corresponds to 'ArrowDown'
+    } else {
+        keys.up = true; // Top half of the screen corresponds to 'ArrowUp'
+    }
+}
+
+// Function to handle touch end event
+function handleTouchEnd(event) {
+    // Reset all keys to false when touch ends
+    keys.w = false;
+    keys.s = false;
+    keys.up = false;
+    keys.down = false;
+}
+
+// Add touch event listeners
+window.addEventListener("touchstart", handleTouchStart, false);
+window.addEventListener("touchend", handleTouchEnd, false);
 </script>
 </body>
 </html>
