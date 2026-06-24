@@ -12,6 +12,9 @@
 		<!-- Sidebar -->
 			<section id="sidebar">
 				<div class="inner">
+					<div class="sidebar-logo" aria-hidden="true">
+						<img src="images/omega_creations_logo.png" alt="Omega Creations logo" />
+					</div>
 					<nav>
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
@@ -31,6 +34,9 @@
 				</nav>-->
 				<!-- Intro -->
 				<section id="intro" class="wrapper style1 fullscreen fade-up">
+					<div class="intro-mobile-logo" aria-hidden="true">
+						<img src="images/omega_creations_logo.png" alt="Omega Creations logo" />
+					</div>
 					<video
 						autoplay
 						muted
@@ -47,8 +53,8 @@
 						<source src="14683785_3840_2160_30fps.mp4" type="video/mp4">
 					</video>
 					<div class="inner">
-					  <p>Greetings- <br/>My name is Jeff, and I am a Computer Scientist, Software Developer and founder of Omega Creations. 
-						<p ><span id="randomQuote"><em></em></span></p>
+						  <p>Greetings- <br/>My name is Jeff, and I am a Computer Scientist, Software Developer and founder of Omega Creations.</p>
+							<p class="intro-quote"><span id="randomQuote"><em></em></span></p>
 					  <ul class="actions">
 						<li><a href="#one" class="button scrolly">Learn more</a></li>
 					  </ul>
@@ -248,7 +254,7 @@
 		function setRandomQuote() {
 			var randomQuoteElement = document.getElementById("randomQuote");
 			if (randomQuoteElement && randomQuoteElement.innerHTML !== null) {
-				randomQuoteElement.innerHTML =  "<em style='white-space: pre-line;'>" + getRandomQuote() + "</em>";;
+				randomQuoteElement.innerHTML =  "<em>" + getRandomQuote() + "</em>";
 			}
 		}
 		window.onload = function() {

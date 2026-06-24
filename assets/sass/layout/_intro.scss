@@ -30,6 +30,24 @@
 		.inner {
 			position: relative;
 			z-index: 1;
+
+			@include breakpoint('<=small') {
+				min-height: 100svh;
+			}
+		}
+
+		.intro-quote {
+			margin-bottom: 0;
+		}
+
+		#randomQuote {
+			display: block;
+			min-height: 5.25em;
+
+			em {
+				display: block;
+				white-space: pre-line;
+			}
 		}
 
 		p {
