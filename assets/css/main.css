@@ -3976,7 +3976,10 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#intro {
-				min-height: 100svh;
+				height: 100svh;
+				max-height: 100svh;
+				box-sizing: border-box;
+				overflow: hidden;
 			}
 
 			#intro .intro-mobile-logo {
@@ -4013,12 +4016,30 @@ input, select, textarea {
 	#intro .inner {
 		position: relative;
 		z-index: 1;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		min-height: 70vh;
 	}
+
+		#intro .inner .actions {
+			margin-top: auto;
+		}
 
 		@media screen and (max-width: 736px) {
 
 			#intro .inner {
-				min-height: 100svh;
+				-moz-flex: 1;
+				-webkit-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+				min-height: 0;
+				overflow: hidden;
 			}
 
 		}
