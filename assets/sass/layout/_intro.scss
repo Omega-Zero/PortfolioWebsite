@@ -23,7 +23,7 @@
 			z-index: 0;
 
 			@include breakpoint('<=small') {
-				min-height: 100svh;
+				height: 100svh;
 			}
 		}
 
@@ -51,7 +51,7 @@
 		}
 
 		p {
-			font-size: 1.25em;
+			font-size: 1.5em;
 
 			@include breakpoint('<=medium') {
 				br {
@@ -60,7 +60,7 @@
 			}
 
 			@include breakpoint('<=small') {
-				font-size: 1em;
+				font-size: 1.2em;
 			}
 		}
 

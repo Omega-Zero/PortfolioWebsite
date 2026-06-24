@@ -3606,9 +3606,20 @@ input, select, textarea {
 			margin: 0 0 1.25em 0;
 		}
 
+		#sidebar .sidebar-tagline {
+			color: rgba(255, 255, 255, 0.7);
+			font-size: 0.713em;
+			letter-spacing: 0.2em;
+			line-height: 1.6;
+			margin: -0.225em 0 1.25em 0;
+			white-space: nowrap;
+			text-align: right;
+			text-transform: uppercase;
+		}
+
 			#sidebar .sidebar-logo img {
 				display: block;
-				max-width: 11.25em;
+				max-width: 12.65625em;
 				width: 100%;
 				height: auto;
 			}
@@ -3914,6 +3925,10 @@ input, select, textarea {
 						display: none;
 					}
 
+					#sidebar .sidebar-tagline {
+						display: none;
+					}
+
 		}
 
 		@media screen and (max-width: 736px) {
@@ -3938,9 +3953,23 @@ input, select, textarea {
 			text-align: center;
 		}
 
+		#intro .intro-tagline {
+			display: none;
+			position: relative;
+			z-index: 1;
+			color: rgba(255, 255, 255, 0.75);
+			font-size: 0.782em;
+			letter-spacing: 0.2em;
+			line-height: 1.6;
+			margin: 0.3em 0 0;
+			padding: 0 1em;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
 			#intro .intro-mobile-logo img {
 				display: inline-block;
-				width: min(77.5vw, 18.75em);
+				width: min(90vw, 25.3125em);
 				height: auto;
 			}
 
@@ -3953,6 +3982,10 @@ input, select, textarea {
 			#intro .intro-mobile-logo {
 				display: block;
 				padding: 0.96em 1em 0;
+			}
+
+			#intro .intro-tagline {
+				display: block;
 			}
 
 		}
@@ -3972,7 +4005,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#intro-video {
-				min-height: 100svh;
+				height: 100svh;
 			}
 
 		}
@@ -4005,7 +4038,7 @@ input, select, textarea {
 		}
 
 		#intro p {
-			font-size: 1.25em;
+			font-size: 1.5em;
 		}
 
 			@media screen and (max-width: 980px) {
@@ -4019,7 +4052,7 @@ input, select, textarea {
 			@media screen and (max-width: 736px) {
 
 				#intro p {
-					font-size: 1em;
+					font-size: 1.2em;
 				}
 
 			}
