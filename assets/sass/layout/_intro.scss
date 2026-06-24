@@ -9,6 +9,10 @@
 		position: relative;
 		overflow: hidden;
 
+		@include breakpoint('<=small') {
+			min-height: 100svh;
+		}
+
 		&-video {
 			position: absolute;
 			top: 0;

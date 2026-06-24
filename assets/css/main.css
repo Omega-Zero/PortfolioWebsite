@@ -3908,6 +3908,14 @@ input, select, textarea {
 		overflow: hidden;
 	}
 
+		@media screen and (max-width: 736px) {
+
+			#intro {
+				min-height: 100svh;
+			}
+
+		}
+
 	#intro-video {
 		position: absolute;
 		top: 0;
