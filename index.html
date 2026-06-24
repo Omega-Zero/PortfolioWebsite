@@ -31,7 +31,19 @@
 				</nav>-->
 				<!-- Intro -->
 				<section id="intro" class="wrapper style1 fullscreen fade-up">
-					<video autoplay muted loop playsinline id="intro-video">
+					<video
+						autoplay
+						muted
+						loop
+						playsinline
+						webkit-playsinline="true"
+						disablepictureinpicture
+						disableremoteplayback
+						x-webkit-airplay="deny"
+						controlslist="nodownload noplaybackrate noremoteplayback nofullscreen"
+						preload="auto"
+						id="intro-video"
+					>
 						<source src="14683785_3840_2160_30fps.mp4" type="video/mp4">
 					</video>
 					<div class="inner">
@@ -242,6 +254,38 @@
 		window.onload = function() {
 			setRandomQuote();
 			var timer = setInterval(setRandomQuote, 7000);
+			var introVideo = document.getElementById("intro-video");
+			if (introVideo) {
+				introVideo.defaultMuted = true;
+				introVideo.muted = true;
+				introVideo.loop = true;
+				introVideo.autoplay = true;
+				introVideo.playsInline = true;
+
+				var ensurePlaying = function() {
+					var playPromise = introVideo.play();
+					if (playPromise && typeof playPromise.catch === "function") {
+						playPromise.catch(function() {
+							// Ignore autoplay rejections from browser policy.
+						});
+					}
+				};
+
+				introVideo.addEventListener("pause", function() {
+					ensurePlaying();
+				});
+
+				introVideo.addEventListener("loadedmetadata", function() {
+					ensurePlaying();
+				});
+
+				introVideo.addEventListener("click", function(event) {
+					event.preventDefault();
+					ensurePlaying();
+				});
+
+				ensurePlaying();
+			}
 		/*	const deviceInfo = {
 				userAgent: navigator.userAgent,
 				platform: navigator.platform,

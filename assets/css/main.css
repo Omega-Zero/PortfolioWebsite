@@ -3924,6 +3924,8 @@ input, select, textarea {
 		height: 100%;
 		object-fit: cover;
 		z-index: 0;
+		pointer-events: none;
+		user-select: none;
 	}
 
 		@media screen and (max-width: 736px) {
