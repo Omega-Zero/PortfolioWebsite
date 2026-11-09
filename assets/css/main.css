@@ -4045,6 +4045,15 @@ input, select, textarea {
 			margin-top: auto;
 		}
 
+		#welcome .intro-scroll-link {
+			align-self: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: auto;
+			border-bottom: 0;
+		}
+
 		@media screen and (max-width: 736px) {
 
 			#welcome .inner {
@@ -4059,7 +4068,11 @@ input, select, textarea {
 		}
 
 	#welcome .intro-quote {
+		margin-top: 1em;
 		margin-bottom: 0;
+		color: rgba(201, 209, 216, 0.75);
+		font-size: 1.05em;
+		line-height: 1.5;
 	}
 
 	#welcome #randomQuote {
@@ -4078,6 +4091,7 @@ input, select, textarea {
 
 		#welcome .intro-heading {
 			font-size: 1.5em;
+			text-align: center;
 		}
 
 			@media screen and (max-width: 980px) {
@@ -4095,7 +4109,7 @@ input, select, textarea {
 				}
 
 				#welcome .intro-heading {
-					font-size: 1.2em;
+					display: none;
 				}
 
 			}
