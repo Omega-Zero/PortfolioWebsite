@@ -3609,12 +3609,26 @@ input, select, textarea {
 		#sidebar .sidebar-tagline {
 			color: rgba(255, 255, 255, 0.7);
 			font-size: 0.713em;
-			letter-spacing: 0.2em;
+			letter-spacing: 0.08em;
 			line-height: 1.6;
 			margin: -0.225em 0 1.25em 0;
+			white-space: normal;
+			text-align: center;
+			text-transform: none;
+		}
+
+		.logo-tagline .tagline-service,
+		.logo-tagline .tagline-location {
+			display: block;
+		}
+
+		.logo-tagline .tagline-location {
+			margin-top: 0.2em;
 			white-space: nowrap;
-			text-align: right;
-			text-transform: uppercase;
+		}
+
+		.logo-tagline .tagline-location .fa-map-marker-alt {
+			margin-right: 0.25em;
 		}
 
 			#sidebar .sidebar-logo img {
@@ -3959,12 +3973,12 @@ input, select, textarea {
 			z-index: 1;
 			color: rgba(255, 255, 255, 0.75);
 			font-size: 0.782em;
-			letter-spacing: 0.2em;
+			letter-spacing: 0.08em;
 			line-height: 1.6;
 			margin: 0.3em 0 0;
 			padding: 0 1em;
 			text-align: center;
-			text-transform: uppercase;
+			text-transform: none;
 		}
 
 			#welcome .intro-mobile-logo img {
