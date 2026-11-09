@@ -4076,6 +4076,10 @@ input, select, textarea {
 			font-size: 1.5em;
 		}
 
+		#welcome .intro-heading {
+			font-size: 1.5em;
+		}
+
 			@media screen and (max-width: 980px) {
 
 				#welcome p br {
@@ -4087,6 +4091,10 @@ input, select, textarea {
 			@media screen and (max-width: 736px) {
 
 				#welcome p {
+					font-size: 1.2em;
+				}
+
+				#welcome .intro-heading {
 					font-size: 1.2em;
 				}
 
@@ -4115,6 +4123,11 @@ input, select, textarea {
 			}
 
 			#welcome p {
+				font-size: 1em;
+				margin-bottom: 0.4em;
+			}
+
+			#welcome .intro-heading {
 				font-size: 1em;
 				margin-bottom: 0.4em;
 			}
@@ -4150,6 +4163,11 @@ input, select, textarea {
 			}
 
 			#welcome p {
+				font-size: 0.88em;
+				margin-bottom: 0.25em;
+			}
+
+			#welcome .intro-heading {
 				font-size: 0.88em;
 				margin-bottom: 0.25em;
 			}
