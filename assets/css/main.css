@@ -3941,19 +3941,19 @@ input, select, textarea {
 
 /* Intro */
 
-	#intro {
+	#welcome {
 		position: relative;
 		overflow: hidden;
 	}
 
-		#intro .intro-mobile-logo {
+		#welcome .intro-mobile-logo {
 			display: none;
 			position: relative;
 			z-index: 1;
 			text-align: center;
 		}
 
-		#intro .intro-tagline {
+		#welcome .intro-tagline {
 			display: none;
 			position: relative;
 			z-index: 1;
@@ -3967,7 +3967,7 @@ input, select, textarea {
 			text-transform: uppercase;
 		}
 
-			#intro .intro-mobile-logo img {
+			#welcome .intro-mobile-logo img {
 				display: inline-block;
 				width: min(90vw, 25.3125em);
 				height: auto;
@@ -3975,19 +3975,19 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
-			#intro {
+			#welcome {
 				height: 100svh;
 				max-height: 100svh;
 				box-sizing: border-box;
 				overflow: hidden;
 			}
 
-			#intro .intro-mobile-logo {
+			#welcome .intro-mobile-logo {
 				display: block;
 				padding: 0.96em 1em 0;
 			}
 
-			#intro .intro-tagline {
+			#welcome .intro-tagline {
 				display: block;
 			}
 
@@ -4013,7 +4013,7 @@ input, select, textarea {
 
 		}
 
-	#intro .inner {
+	#welcome .inner {
 		position: relative;
 		z-index: 1;
 		display: -moz-flex;
@@ -4027,13 +4027,13 @@ input, select, textarea {
 		min-height: 70vh;
 	}
 
-		#intro .inner .actions {
+		#welcome .inner .actions {
 			margin-top: auto;
 		}
 
 		@media screen and (max-width: 736px) {
 
-			#intro .inner {
+			#welcome .inner {
 				-moz-flex: 1;
 				-webkit-flex: 1;
 				-ms-flex: 1;
@@ -4044,27 +4044,27 @@ input, select, textarea {
 
 		}
 
-	#intro .intro-quote {
+	#welcome .intro-quote {
 		margin-bottom: 0;
 	}
 
-	#intro #randomQuote {
+	#welcome #randomQuote {
 		display: block;
 		min-height: 5.25em;
 	}
 
-		#intro #randomQuote em {
+		#welcome #randomQuote em {
 			display: block;
 			white-space: pre-line;
 		}
 
-		#intro p {
+		#welcome p {
 			font-size: 1.5em;
 		}
 
 			@media screen and (max-width: 980px) {
 
-				#intro p br {
+				#welcome p br {
 					display: none;
 				}
 
@@ -4072,7 +4072,7 @@ input, select, textarea {
 
 			@media screen and (max-width: 736px) {
 
-				#intro p {
+				#welcome p {
 					font-size: 1.2em;
 				}
 
@@ -4082,34 +4082,34 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) and (max-height: 720px) {
 
-			#intro {
+			#welcome {
 				padding-top: 0.75em;
 				padding-bottom: 0.75em;
 			}
 
-			#intro .intro-mobile-logo {
+			#welcome .intro-mobile-logo {
 				padding: 0.3em 1em 0;
 			}
 
-			#intro .intro-mobile-logo img {
+			#welcome .intro-mobile-logo img {
 				width: min(65vw, 16em);
 			}
 
-			#intro .intro-tagline {
+			#welcome .intro-tagline {
 				font-size: 0.7em;
 				margin-top: 0.1em;
 			}
 
-			#intro p {
+			#welcome p {
 				font-size: 1em;
 				margin-bottom: 0.4em;
 			}
 
-			#intro #randomQuote {
+			#welcome #randomQuote {
 				min-height: 0;
 			}
 
-			#intro .inner {
+			#welcome .inner {
 				padding: 1.25em 2em 0.75em 2em;
 			}
 
@@ -4117,30 +4117,30 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) and (max-height: 450px) {
 
-			#intro {
+			#welcome {
 				padding-top: 0.25em;
 				padding-bottom: 0.25em;
 			}
 
-			#intro .intro-mobile-logo {
+			#welcome .intro-mobile-logo {
 				padding: 0.15em 1em 0;
 			}
 
-			#intro .intro-mobile-logo img {
+			#welcome .intro-mobile-logo img {
 				width: min(50vw, 10em);
 			}
 
-			#intro .intro-tagline {
+			#welcome .intro-tagline {
 				font-size: 0.62em;
 				margin-top: 0.05em;
 			}
 
-			#intro p {
+			#welcome p {
 				font-size: 0.88em;
 				margin-bottom: 0.25em;
 			}
 
-			#intro .inner {
+			#welcome .inner {
 				padding: 0.6em 1.5em 0.4em 1.5em;
 			}
 
