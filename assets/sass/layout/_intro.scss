@@ -78,70 +78,95 @@
 
 	}
 
-	/* Short viewport height on mobile – scale content so everything stays visible */
+	@media screen and (max-width: 736px), screen and (max-width: 950px) and (max-height: 500px) and (orientation: landscape) {
+		#sidebar {
+			display: none;
+		}
 
-	@media screen and (max-width: 736px) and (max-height: 720px) {
+		#sidebar + #wrapper {
+			padding-top: 0;
+		}
 
-		#welcome {
-			padding-top: 0.75em;
-			padding-bottom: 0.75em;
+		#welcome.wrapper.fullscreen {
+			height: 100vh;
+			height: 100dvh;
+			max-height: none;
+			min-height: 0;
+			padding: 0;
+		}
+
+		#intro-video {
+			height: 100%;
 		}
 
 		#welcome .intro-mobile-logo {
-			padding: 0.3em 1em 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex: 0 0 27.5%;
+			min-height: 0;
+			padding: 0.5em 1em 0;
 		}
 
 		#welcome .intro-mobile-logo img {
-			width: min(65vw, 16em);
+			width: auto;
+			height: 100%;
+			max-width: 90%;
+			object-fit: contain;
+			transform: translateY(clamp(0.25rem, 1.2vh, 0.75rem));
 		}
 
 		#welcome .intro-tagline {
-			font-size: 0.7em;
-			margin-top: 0.1em;
+			display: block;
+			flex: none;
+			font-size: clamp(0.65rem, 1.5vh, 0.78rem);
+			line-height: 1.4;
+			margin: 0;
 		}
 
-		#welcome p {
-			font-size: 1em;
-			margin-bottom: 0.4em;
+		#welcome .inner {
+			flex: 1 1 0;
+			min-height: 0;
+			padding: clamp(1rem, 4.5vh, 2.5rem) 1.5em max(0.75em, env(safe-area-inset-bottom));
+		}
+
+		#welcome .intro-content {
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 auto;
+			min-height: 0;
+			overflow-y: auto;
+			overscroll-behavior: contain;
+		}
+
+		#welcome .intro-heading {
+			display: none;
+		}
+
+		#welcome .intro-content p {
+			flex-shrink: 0;
+			font-size: clamp(0.875rem, 2.2vh, 1.375rem);
+			font-size: clamp(0.875rem, 2.2dvh, 1.375rem);
+			line-height: 1.45;
+			margin: 0 0 0.75em;
+		}
+
+		#welcome .intro-content > p:not(.intro-quote) {
+			transform: translateY(clamp(0.5rem, 1.5vh, 0.75rem));
+		}
+
+		#welcome .intro-content .intro-quote {
+			font-size: clamp(0.8125rem, 1.8vh, 1rem);
+			margin-top: auto;
+			margin-bottom: 0;
 		}
 
 		#welcome #randomQuote {
 			min-height: 0;
 		}
 
-		#welcome .inner {
-			padding: 1.25em 2em 0.75em 2em;
+		#welcome .intro-scroll-link {
+			flex: none;
+			margin-top: clamp(1rem, 3.5vh, 2rem);
 		}
-
-	}
-
-	@media screen and (max-width: 736px) and (max-height: 450px) {
-
-		#welcome {
-			padding-top: 0.25em;
-			padding-bottom: 0.25em;
-		}
-
-		#welcome .intro-mobile-logo {
-			padding: 0.15em 1em 0;
-		}
-
-		#welcome .intro-mobile-logo img {
-			width: min(50vw, 10em);
-		}
-
-		#welcome .intro-tagline {
-			font-size: 0.62em;
-			margin-top: 0.05em;
-		}
-
-		#welcome p {
-			font-size: 0.88em;
-			margin-bottom: 0.25em;
-		}
-
-		#welcome .inner {
-			padding: 0.6em 1.5em 0.4em 1.5em;
-		}
-
 	}
