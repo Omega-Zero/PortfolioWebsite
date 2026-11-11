@@ -18,7 +18,9 @@
 
 /* Wrapper */
 
-	.wrapper > .inner {
+	.wrapper > .inner,
+	#welcome.wrapper > .intro-mobile-logo,
+	#welcome.wrapper > .intro-tagline {
 		opacity: 1 !important;
 		-moz-transform: none !important;
 		-webkit-transform: none !important;
